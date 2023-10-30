@@ -1,0 +1,10 @@
+body {
+    .nav-list {
+        float: left;
+        color: var(--clr-neutral);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: var(--nav);
+    }
+}
