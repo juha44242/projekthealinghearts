@@ -153,7 +153,7 @@ picture {
     }
     
     .bg-footer {
-      background-color: var(--clr-two);
+      background-color: var(--clr-neutral);
     }
 
     .fw-bold { 
