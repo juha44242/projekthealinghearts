@@ -92,7 +92,7 @@ picture {
 
   /* Brugervenlige klasser */
   .text-primary-heading { color: var(--one); }
-  .text-primary-heading-light { color: var(--four); }
+  .text-primary-heading-clr { color: var(--four); }
   .text-secondary-heading { color: var(--one); }
   .text-secondary-heading-light { color: var(--neutral); }
   .text-body { color: var(--two); }
