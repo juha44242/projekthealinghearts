@@ -65,148 +65,91 @@ picture {
   }
 }
 
-
 :root {
-    /* Color Variables */
+  /* Farvevariabler */
+  --neutral: #ffffff;
+  --neutrale: #c6c8d8;
+  --one: #181921;
+  --two: #2b2c33;
+  --three: #e84044;
+  --four: #c8000b;
+  --five: #dad0bf;
+  --six: #fa5a5e;
 
-    --clr-neutral: #ffffff;
-    --clr-neutrale: #c6c8d8;
+  /* Fontvariabler */
+  --primary-font: 'Barlow', sans-serif;
+  --regular-weight: 400;
+  --bold-weight: 700;
+  --black-weight: 900;
 
-    --clr-one: #181921;
-    --clr-two: #2b2c33;
-    --clr-three: #e84044;
-    --clr-four: #c8000b;
-    --clr-five: #dad0bf;
-    --clr-six: #fa5a5e;
+  /* Fontstørrelsesvariabler i px */
+  --fs-400: 16px;
+  --fs-500: 17px;
+  --fs-600: 20px;
+  --fs-700: 30px;
+  --fs-800: 40px;
+  --fs-900: 56px;
+
+  /* Brugervenlige klasser */
+  .text-primary-heading { color: var(--one); }
+  .text-primary-heading-light { color: var(--four); }
+  .text-secondary-heading { color: var(--one); }
+  .text-secondary-heading-light { color: var(--neutral); }
+  .text-body { color: var(--two); }
+  .text-body-light { color: var(--neutral); }
+  .text-nav { color: var(--one); }
+  .text-nav-light { color: var(--neutral); }
+  .text-nav-hover { color: var(--four); }
   
-    /* Font Variables */
-    --ff-primary: 'Barlow', sans-serif;
-    --fw-regular: 400;
-    --fw-bold: 700;
-    --fw-black: 900;
+  .bg-primary { background-color: var(--neutral); }
+  .bg-header { background-color: var(--neutral); }
+  .bg-section { background-color: var(--neutrale); }
+  .bg-nav { background-color: var(--five); }
+  .bg-footer { background-color: var(--neutral); }
   
-    /* Font Size Variables in px */
-    --fs-400: 16px;
-    --fs-500: 17px;
-    --fs-600: 20px;
-    --fs-700: 30px;
-    --fs-800: 40px;
-    --fs-900: 56px;
-    
-    --body: var(--fs-600);
-    --fs-primary-heading: var(--fs-900);
-    --fs-secondary-heading: var(--fs-800);
+  .fw-bold { font-weight: var(--bold-weight); }
+  .fw-black { font-weight: var(--black-weight); }
+  .fw-regular { font-weight: var(--regular-weight); }
+  
+  .fs-primary-heading { font-size: var(--fs-900); }
+  .fs-secondary-heading { font-size: var(--fs-800); }
+}
+
+/* Juster skriftstørrelser for mindre skærme */
+@media screen and (max-width: 768px) {
+  :root {
+    --body: var(--fs-400);
+    --fs-primary-heading: var(--fs-700);
+    --fs-secondary-heading: var(--fs-600);
     --nav: var(--fs-500);
     --button: var(--fs-400);
-    
-    /* utility classes */
-    .text-primary-heading {
-      color: var(--clr-one);
-    }
-    
-    .text-primary-heading-light {
-      color: var(--clr-four);
-    }
-    
-    .text-secondary-heading {
-      color: var(--clr-one);
-    }
-    
-    .text-secondary-heading-light {
-      color: var(--clr-neutral);
-    }
-    
-    .text-body {
-      color: var(--clr-two);
-    }
-    
-    .text-body-light {
-      color: var(--clr-neutral);
-    }
-    
-    .text-nav {
-      color: var(--clr-one);
-    }
-    
-    .text-nav-light {
-      color: var(--clr-neutral);
-    }
-    
-    .text-nav-hover {
-      color: var(--clr-four);
-    }
-    
-    .bg-primary {
-      background-color: var(--clr-neutral);
-    }
-    
-    .bg-header {
-      background-color: var(--clr-neutral);
-    }
-    
-    .bg-section {
-      background-color: var(--clr-neutrale);
-    }
-    
-    .bg-nav {
-      background-color: var(--clr-five);
-    }
-    
-    .bg-footer {
-      background-color: var(--clr-neutral);
-    }
-
-    .fw-bold { 
-      font-weight: var(--fw-bold);
-      }
-      .fw-black { 
-      font-weight: var(--fw-black);
-      }
-      .fw-regular  { 
-      font-weight: var(--fw-regular);
-      }
-      .fs-primary-heading { 
-      font-size: var(--fs-900);
-      }
-      .fs-secondary-heading  { font-size: var(--fs-800);
-      }
-      
-
-    /* Adjust font sizes for smaller screens */
-
-    @media screen and (max-width: 768px) {
-      --body: var(--fs-400); /* You can adjust these values as needed */
-      --fs-primary-heading: var(--fs-700);
-      --fs-secondary-heading: var(--fs-600);
-      --nav: var(--fs-500);
-      --button: var(--fs-400);
-    }
-    
-
-    /* Adjust font sizes for larger screens */
-
-    @media screen and (min-width: 1200px) {
-      --body: var(--fs-500); /* You can adjust these values as needed */
-      --fs-primary-heading: var(--fs-900);
-      --fs-secondary-heading: var(--fs-800);
-      --nav: var(--fs-600);
-      --button: var(--fs-500);
-    }
   }
-  
-  body {
-    font-family: var(--ff-primary);
-    font-size: var(--body);
-    font-weight: var(--fw-regular);
-    padding: 20px;
+}
+
+/* Juster skriftstørrelser for større skærme */
+@media screen and (min-width: 1200px) {
+  :root {
+    --body: var(--fs-500);
+    --fs-primary-heading: var(--fs-900);
+    --fs-secondary-heading: var(--fs-800);
+    --nav: var(--fs-600);
+    --button: var(--fs-500);
   }
-  
-  nav {
-    font-size: var(--nav);
-    font-weight: var(--fw-bold);
-  }
-  
-  footer {
-    font-size: var(--fs-primary-heading);
-    font-weight: var(--fw-regular);
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: var(--body);
+  font-weight: var(--regular-weight);
+  padding: 20px;
+}
+
+nav {
+  font-size: var(--nav);
+  font-weight: var(--bold-weight);
+}
+
+footer {
+  font-size: var(--fs-primary-heading);
+  font-weight: var(--regular-weight);
   }
