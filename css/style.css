@@ -8,3 +8,13 @@ body {
         font-size: var(--nav);
     }
 }
+
+.text-box {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--two);
+    color: var(--clr-neutral);
+    padding-left: 20px;
+    padding-right: 20px;
+}
