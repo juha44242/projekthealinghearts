@@ -68,13 +68,12 @@ picture {
 :root {
   /* Farvevariabler */
   --neutral: #ffffff;
-  --neutrale: #c6c8d8;
+  --neutrale: #f0f1f5;
   --one: #181921;
   --two: #2b2c33;
   --three: #e84044;
   --four: #c8000b;
   --five: #ebe7df;
-  --six: #fa5a5e;
 
   /* Fontvariabler */
   --primary-font: 'Barlow', sans-serif;
