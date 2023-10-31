@@ -73,7 +73,7 @@ picture {
   --two: #2b2c33;
   --three: #e84044;
   --four: #c8000b;
-  --five: #dad0bf;
+  --five: #ebe7df;
   --six: #fa5a5e;
 
   /* Fontvariabler */
@@ -104,7 +104,7 @@ picture {
   .bg-primary { background-color: var(--neutral); }
   .bg-header { background-color: var(--neutral); }
   .bg-section { background-color: var(--neutrale); }
-  .bg-textbox { background-color: var(--two);}
+  .bg-textbox { background-color: var(--two);} 
   .bg-nav { background-color: var(--five); }
   .bg-footer { background-color: var(--neutral); }
   
