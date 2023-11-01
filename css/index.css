@@ -111,8 +111,8 @@ picture {
   .fw-black { font-weight: var(--black-weight); }
   .fw-regular { font-weight: var(--regular-weight); }
   
-  .fs-primary-heading { font-size: var(--fs-900); }
-  .fs-secondary-heading { font-size: var(--fs-800); }
+  .fs-primary-heading { font-size: var(--fs-800); }
+  .fs-secondary-heading { font-size: var(--fs-700); }
 }
 
 /* Juster skriftstørrelser for mindre skærme */
