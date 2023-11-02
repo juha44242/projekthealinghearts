@@ -23,3 +23,26 @@ font-weight: var(--bold-weight);
 text-align: center;
 }
 
+.topnav {
+    overflow: hidden;
+    background-color: var(--five);
+}
+
+.nav-list {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: var(--500);
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
