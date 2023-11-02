@@ -23,10 +23,3 @@ font-weight: var(--bold-weight);
 text-align: center;
 }
 
-.topnav {
-    width: 100%;
-    background-color: var(--five);
-    position: fixed;
-    width: 100%;
-    transition: top 0,5s;    
-}
