@@ -1,0 +1,33 @@
+:root {
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+
+    /* farver */
+    --primary: #ffffff;
+    --neutral: #f0f1f5;
+    --one: #181921;
+    --two: #2b2c33;
+    --three: #e84044;
+    --four: #c8000b;
+    --five: #ebe7df;
+  
+    /* font */
+    --primary-font: 'Barlow', sans-serif;
+    --regular: 400;
+    --bold: 700;
+    --black: 900;
+  
+    /* font-size i px */
+    --fs-400: 16px;
+    --fs-500: 17px;
+    --fs-600: 20px;
+    --fs-700: 30px;
+    --fs-800: 40px;
+    --fs-900: 56px;
+  
+
+}
