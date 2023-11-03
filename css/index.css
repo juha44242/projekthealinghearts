@@ -31,10 +31,11 @@
     .bg-primary { background-color: var(--primary);}      
     .bg-header { background-color: var(--primary);}
     .bg-nav { background-color: var(--five);}
-    .bg-section { background-color: var(--neutral);}
+    .bg-section { background-color: var(--five);}
     .bg-footer { background-color: var(--two);}
     
     .primary-heading { color: var(--one);}
     .heading-color { color: var(--four);}
-    
+    .text-color { color: var(--two);}
+    .text.light { color: var(--neutral);}
 }
