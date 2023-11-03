@@ -45,6 +45,6 @@
     .secondary-heading { color: var(--primary);}
     .heading-color { color: var(--four);}
     .text-color { color: var(--two);}
-    .text.light { color: var(--neutral);}
+    .text.light { color: var(--primary);}
     .button { color: var(--three);}
 }
