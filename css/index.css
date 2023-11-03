@@ -27,5 +27,9 @@
     --fs-800: 40px;
     --fs-900: 56px;
   
+    /* klasser */
+
+      .bg-primary { background-color: var(--primary);}
+      
 
 }
