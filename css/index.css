@@ -45,6 +45,25 @@
     .secondary-heading { color: var(--primary);}
     .heading-color { color: var(--four);}
     .text-color { color: var(--two);}
-    .text.light { color: var(--primary);}
-    .button { color: var(--three);}
+    .text.light { color: var(--primary);}    
 }
+
+body {
+
+background-color: var(--primary);
+
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:25px;
+}
+
+.topnav {
+    display: flex;
+    background-color: var(--five);
+    padding: 25px;
+}
+
