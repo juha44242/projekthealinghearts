@@ -64,6 +64,21 @@ background-color: var(--primary);
 .topnav {
     display: flex;
     background-color: var(--five);
-    padding: 25px;
+    padding: 25px 25px 25px 25px;
 }
 
+.main-heading {
+    font-family: var(--primary-font);
+    font-size: var(--fs-900);
+    font-weight: var(--bold);
+    color: var(--four);
+    text-align: center;
+}
+
+.heading {
+    font-family: var(--primary-font);
+    font-size: var(--fs-700);
+    font-weight: var(--bold);
+    color: var(--one);
+    text-align: center;
+}
