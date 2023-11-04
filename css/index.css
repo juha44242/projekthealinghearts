@@ -82,20 +82,6 @@ background-color: var(--primary);
 
 }
 
-.button {
-    background-color: var(--three);
-    border: none;
-    color: var(--primary);
-    padding: 15 px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: var(--primary-font);
-    font-size: var(--fs-400);
-    font-weight: var(--bold);
-
-}
-
 .main-heading {
     font-family: var(--primary-font);
     font-size: var(--fs-900);
