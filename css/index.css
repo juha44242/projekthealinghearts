@@ -112,3 +112,9 @@ background-color: var(--primary);
     text-align: center;
 }
 
+
+
+.footer {
+    background-color: var(--two);
+    
+}
