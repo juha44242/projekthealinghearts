@@ -54,6 +54,8 @@ background-color: var(--primary);
 
 }
 
+/* toppen af hjemmesiden */
+
 .header {
     display: flex;
     justify-content: center;
@@ -61,26 +63,32 @@ background-color: var(--primary);
     padding:25px;
 }
 
+/* navigation menuen*/
+
 .topnav {
-    display: flex;
     background-color: var(--five);
-    padding: 40px 25px 40px 25px;
-}
-
-.tabnav {
-    display: flex;
-    background-color: var(--five);
-    align-items: center;
-    border-color: var(--five);
-    outline-style: none;
-    padding: 10px 10px 10px 10px;
-    text-align: center;
-    text-decoration: none;
+    width: 100%;
+    overflow: hidden;
+    float: center;
+    display: block;
+    color: var(--one);
     font-family: var(--primary-font);
-    font-size: var(--fs-400);
+    font-size: var(--fs-600);
     font-weight: var(--black);
+    text-align: center;
+    margin: 15px;
+    padding: 20px 20px 20px 20px;
+    text-decoration: none;
 
 }
+
+.topnav a.hover {
+    background-color: var(--five);
+    
+}
+
+
+/* titel på siden og headline */
 
 .main-heading {
     font-family: var(--primary-font);
