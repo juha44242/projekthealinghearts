@@ -59,7 +59,7 @@ function initApp(){
         newDiv.classList.add('item');
         //Gør at HTML elementerne i kurven (Navn, billede, pris, osv.) vises:
         newDiv.innerHTML = `
-            <img src="image/${value.image}"/>
+            <img src="img/${value.image}"/>
             <div class="title">${value.name}</div>
             <div class="price">${value.price.toLocaleString()}</div>
             <button onclick="addToCard(${key})">Add To Cart</button>
@@ -95,7 +95,7 @@ function reloadCard( ){
             let newDiv = document.createElement('li');
             //Gør at <li> elementet viser billede, navn og pris på varen. Button onclick gør at pris ændres, jo flere varer man tilføjer.
             newDiv.innerHTML = `
-                <div><img src="image/${value.image}"/></div>
+                <div><img src="img/${value.image}"/></div>
                 <div>${value.name}</div>
                 <div>${value.price.toLocaleString( )}</div>
                 <div>
