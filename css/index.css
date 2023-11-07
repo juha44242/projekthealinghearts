@@ -80,7 +80,7 @@ nav .topnav {
     width: 100%;
     background-color: var(--five);
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -89,6 +89,8 @@ nav .topnav {
 .topnav .nav_links {
     display: flex;
     align-items: center;
+    margin: 5px 10px;
+    padding: 5px 10px;
 }
 
 .topnav .nav_links {
@@ -156,6 +158,24 @@ nav .topnav {
 
 
 .footer {
-    background-color: var(--two);
-    
+    background-color: var(--primary);
+
+}
+
+@media (max-fixed: 790) {
+    .menu {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0; 
+    }
+
+    .topnav .nav_links {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        
+    }
 }
