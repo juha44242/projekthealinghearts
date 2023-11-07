@@ -190,16 +190,17 @@ nav .topnav {
 * {
     margin: 0;
     padding: 0;
-    box-sizing
+    box-sizing: box-sizing;
 }
  
 h2 {
-    font-size: 5rem;
-    padding: 3rem;
+    font-size: 18px;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    font-family: var(--primary-font);
 }
 
 .coming-soon {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -211,8 +212,11 @@ h2 {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    font-family: var(--primary-font);
+    font-size: 12px;
 }
 
 .day,.hour,.minute,.second{
-    font-size: 3rem;
+    font-size: 30px;
+    font-family: var(--primary-font);
 }
