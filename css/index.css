@@ -126,6 +126,17 @@ nav .topnav {
     opacity: 1;
 }
 
+
+.icon {
+    height: 35px;
+    width: 30px;
+    margin: 5px;
+    padding: 5px;
+
+
+
+}
+
 .nav_links button{
     background-color: var(--four);
     color: var(--neutral);
