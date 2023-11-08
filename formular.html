@@ -8,15 +8,18 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/formular.css">
         <script src="js/index.js" defer></script>       
     </head>
 
     <body>
 
-        <h2> Registering for at blive frivillig</h2>
+        <h1> Registering for at blive frivillig</h1>
 
         <form action="#" class="form">
+
+            <h2 class="text-center">Sign up</h2>
+
           <div class="form-step active">
             <div class="input-group">
                 <label for="username">Fornavn</label>
@@ -26,15 +29,9 @@
                 <label for="lname">Efternavn</label>
                 <input type="text" name="lname" id="lname">
             </div>
-        </div>
-        <div class="">
-            <a href="#" class="btn btn-next with-50 ml-auto">Next</a>
-        </div>  
-        </form>
-
-        
-            <label>Køn</label>
+            
             <div class="custom_select">
+                <label>Køn</label>
                 <select>
                     <option value="">Vælg</option>
                     <option value="Mand">Mand</option>
@@ -44,6 +41,52 @@
                     <option value="Andet">Andet</option>
                 </select>
             </div>
+        </div>
+        <div class="">
+            <a href="#" class="btn btn-next with-50 ml-auto">Næste</a>
+        </div>  
+       
+        <div class="form-step">
+            <div class="input-group">
+                <label for="telefon">Telefon</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+        </div>
+        <div class="btns-group">
+            <a href="#" class="btn btn-pre">tilbage</a>
+            <a href="#" class="btn btn-next">Næste</a>
+        </div> 
+
+        <div class="form-step">
+            <div class="input-group">
+                <label for="category">Kategori</label>
+                <select>
+                    <option value="">Vælg</option>
+                    <option value="Mand">Mand</option>
+                    <option value="Kvinde">Kvinde</option>
+                    <option value="Transkønnet">Transkønnet</option>
+                    <option value="Non-binær">Non-binær</option>
+                    <option value="Andet">Andet</option>
+                </select>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+        </div>
+        <div class="btns-group">
+            <a href="#" class="btn btn-pre">tilbage</a>
+            <a href="#" class="btn btn-next">Næste</a>
+        </div>
+
+        </form>
+
+            
         
 </body>
 </html>
