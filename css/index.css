@@ -216,62 +216,6 @@ h2 {
     font-family: var(--primary-font);
 }
 
-/* bliv frivllige - sign up*/
-
-*
-*::after
-*::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    font-family: var(--primary-font);
-    display: grid;
-    place-items: center;
-}
-label{
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-input{
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #181921;
-    border-radius: 0.25rem;
-}
-
-.form {
-    font-family: var(--primary-font);
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    width: clamp (320px, 30%, 430px);
-    margin: 0 auto;
-    border: 1px solid #181921;
-    border-radius: .35rem;
-    padding: 1.5rem;
-    background-color: var(--five);
-    box-shadow: 2px 4px 11px -1px #181921;    
-}
-
-.input-group{
-    margin: 2rem 0;
-}
-
-.btn{
-    padding: 0.75rem;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    background-color: var(--four);
-    color: var(--primary);
-    border-radius: .25rem;
-    cursor: pointer;
-}
 
 /* bunden af hjemmesiden */
 .footer {
