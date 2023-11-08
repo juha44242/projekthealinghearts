@@ -132,9 +132,6 @@ nav .topnav {
     width: 30px;
     margin: 5px;
     padding: 5px;
-
-
-
 }
 
 .nav_links button{
@@ -224,7 +221,7 @@ h2 {
 /* bunden af hjemmesiden */
 .footer {
     background-color: var(--primary);
-
+    width: 100%;
 }
 
 @media (max-fixed: 790) {
