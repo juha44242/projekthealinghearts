@@ -1,0 +1,189 @@
+:root{
+        /* farver */
+        --primary: #ffffff;
+        --neutral: #f0f1f5;
+        --one: #181921;
+        --two: #2b2c33;
+        --three: #e84044;
+        --four: #c8000b;
+        --five: #ebe7df;
+      
+        /* font */
+        --primary-font: 'Barlow', sans-serif;
+        --regular: 400;
+        --bold: 700;
+        --black: 900;
+      
+        /* font-size i px */
+        --fs-400: 16px;
+        --fs-500: 17px;
+        --fs-600: 20px;
+        --fs-700: 30px;
+        --fs-800: 40px;
+        --fs-900: 56px;
+    
+        /* font-weight */
+        .fw-bold { font-weight: var(--bold);}
+        .fw-black { font-weight: var(--black);}
+        .fw-regular { font-weight: var(--regular);}
+      
+      
+        /* klasser */
+        .bg-primary { background-color: var(--primary);}      
+        .bg-header { background-color: var(--primary);}
+        .bg-nav { background-color: var(--five);}
+        .bg-section { background-color: var(--neutral);}
+        .bg-box { background-color: var(--five);}
+        .bg-footer { background-color: var(--two);}
+        
+        .primary-heading { color: var(--one);}
+        .secondary-heading { color: var(--primary);}
+        .heading-color { color: var(--four);}
+        .text-color { color: var(--two);}
+        .text.light { color: var(--primary);}    
+    }
+
+*
+*::after
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--primary-font);
+    display: grid;
+    place-items: center;   
+    min-height: 100vh;
+    background-color: var(--primary);
+}
+
+/* generale informationer */
+
+label{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #181921;
+    border-radius: 0.25rem;
+}
+
+.text-center{
+    text-align: center;
+    color: var(--one);
+    font-size: var(--fs-700);
+}
+
+.with-50{
+    width: 50%;
+}
+
+.ml-auto{
+    margin-left: auto;
+}
+
+/* progress*/
+
+.progressbar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0 4rem 0;
+}
+
+.progressbar::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: var(--primary);
+
+}
+
+.progress-step{
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.progress-step::before{
+    counter-increment: step;
+    content: counter(step);
+}
+
+.progressbar::after{
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: var(--fs-400);
+    columns: var(--one);
+}
+
+.progress-step.active{
+    background-color: var(--four);
+    color: var(--primary);
+}
+
+/*formular*/
+
+.form {
+    width: clamp(320px, 30%, 450px);
+    margin: 0 auto;
+    border: 1px solid var(--one);
+    border-radius: .35rem;
+    padding: 1.5rem;
+    background-color: var(--five);
+    box-shadow: 2px 4px 11px -1px var(--two);
+}
+
+.form-step{
+    display: none;
+}
+
+.form-step.active{
+    display: block;
+}
+
+.input-group{
+    margin: 2rem 0;
+}
+
+/* knapper */
+.btns-group{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+}
+.btn{
+    padding: 0.75rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--four);
+    color: var(--primary);
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+btn:active{
+    transform: scale(.98);
+}
+
+.btn:hover{
+    box-shadow: 0px 0px 0px 2px var(--three), 0px 0px 0px 3px;
+    color: var(--primary);
+}
