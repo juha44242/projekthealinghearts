@@ -153,6 +153,7 @@ nav .topnav {
     font-weight: var(--bold);
     color: var(--four);
     text-align: center;
+    line-height: 65px;
 }
 
 .pageheading{
@@ -161,6 +162,7 @@ nav .topnav {
     font-weight: var(--bold);
     color: var(--one);
     text-align: center;
+    line-height: 40px;
 }
 
 .heading{
