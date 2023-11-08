@@ -70,7 +70,7 @@ input{
     display: block;
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #181921;
+    border: 1px solid var(--two);
     border-radius: 0.25rem;
 }
 
@@ -95,9 +95,10 @@ input{
     display: flex;
     justify-content: space-between;
     margin: 2rem 0 4rem 0;
+    counter-reset: step;
 }
 
-.progressbar::before{
+.progressbar::before  .progress{
     content: "";
     position: absolute;
     top: 50%;
@@ -106,6 +107,12 @@ input{
     width: 100%;
     background-color: var(--primary);
 
+}
+
+.progress{
+    background-color: var(--four);
+    width: 0%;
+    transition: 0.3s ease-in-out;
 }
 
 .progress-step{
