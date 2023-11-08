@@ -16,9 +16,20 @@
 
         <h1> Registering for at blive frivillig</h1>
 
+        <!-- progressbar -->
+
+        <div class="progressbar">
+            <div class="progress-step active" data-title="Navn"></div>
+            <div class="progress-step" data-title="Kontakt"></div>
+            <div class="progress-step" data-title="Kategori"></div>
+            <div class="progress-step" data-title="Password"></div>
+        </div>
+
+        <!-- steps -->
+
         <form action="#" class="form">
 
-            <h2 class="text-center">Sign up</h2>
+            <h2 class="text-center">Bliv Frivillig</h2>
 
           <div class="form-step active">
             <div class="input-group">
@@ -57,32 +68,47 @@
             </div>
         </div>
         <div class="btns-group">
-            <a href="#" class="btn btn-pre">tilbage</a>
+            <a href="#" class="btn btn-pre">Tilbage</a>
             <a href="#" class="btn btn-next">Næste</a>
         </div> 
 
         <div class="form-step">
             <div class="input-group">
-                <label for="category">Kategori</label>
+                <label for="kat">Kategori</label>
                 <select>
                     <option value="">Vælg</option>
-                    <option value="Mand">Mand</option>
-                    <option value="Kvinde">Kvinde</option>
-                    <option value="Transkønnet">Transkønnet</option>
-                    <option value="Non-binær">Non-binær</option>
+                    <option value="sport">Sport</option>
+                    <option value="madbod">Mad</option>
+                    <option value="Teknologi">Teknologi</option>
+                    <option value="kreativt">Kreativt</option>
                     <option value="Andet">Andet</option>
                 </select>
-                <input type="text" name="username" id="username">
+                <input type="kategori" name="kat" id="kat">
             </div>
             <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+                <label for="besked">besked</label>
+                <input type="text" name="besked" id="besked">
             </div>
         </div>
         <div class="btns-group">
             <a href="#" class="btn btn-pre">tilbage</a>
             <a href="#" class="btn btn-next">Næste</a>
         </div>
+
+        <div class="form-step">
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password">
+            </div>
+            <div class="input-group">
+                <label for="gentagpassword">Gentag password</label>
+                <input type="password" name="gentagpassword" id="gentagpassword">
+            </div>
+        </div>
+        <div class="btns-group">
+            <a href="#" class="btn btn-pre">tilbage</a>
+            <input type="submit" value="Indsend" class="btn">
+        </div> 
 
         </form>
 
