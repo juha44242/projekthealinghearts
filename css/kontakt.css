@@ -187,13 +187,17 @@ nav .topnav {
   
   /* Style for social media icons */
   .SoMe {
-
     width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    
+    height: 24px;  
   }
-  
+
+  img{
+    display: flex;
+    
+
+  }
+
+
   /* Style for the form fields */
   input[type="text"],
   select,
