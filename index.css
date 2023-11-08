@@ -1,0 +1,242 @@
+:root {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    /* farver */
+    --primary: #ffffff;
+    --neutral: #f0f1f5;
+    --one: #181921;
+    --two: #2b2c33;
+    --three: #e84044;
+    --four: #c8000b;
+    --five: #ebe7df;
+  
+    /* font */
+    --primary-font: 'Barlow', sans-serif;
+    --regular: 400;
+    --bold: 700;
+    --black: 900;
+  
+    /* font-size i px */
+    --fs-400: 16px;
+    --fs-500: 17px;
+    --fs-600: 20px;
+    --fs-700: 30px;
+    --fs-800: 40px;
+    --fs-900: 56px;
+
+    /* font-weight */
+    .fw-bold { font-weight: var(--bold);}
+    .fw-black { font-weight: var(--black);}
+    .fw-regular { font-weight: var(--regular);}
+  
+  
+    /* klasser */
+    .bg-primary { background-color: var(--primary);}      
+    .bg-header { background-color: var(--primary);}
+    .bg-nav { background-color: var(--five);}
+    .bg-section { background-color: var(--neutral);}
+    .bg-box { background-color: var(--five);}
+    .bg-footer { background-color: var(--two);}
+    
+    .primary-heading { color: var(--one);}
+    .secondary-heading { color: var(--primary);}
+    .heading-color { color: var(--four);}
+    .text-color { color: var(--two);}
+    .text.light { color: var(--primary);}    
+}
+
+body {
+
+background-color: var(--primary);
+
+}
+
+/* toppen af hjemmesiden */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:25px;
+}
+
+/* navigation menuen*/
+
+nav {
+    display: flex;
+    left: 0;
+    height: 180px;
+    width: 100%;
+    background-color: var(--five);
+}
+
+nav .topnav {
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--five);
+    margin: 0 auto;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topnav .nav_links {
+    display: flex;
+    align-items: center;
+    margin: 5px 10px;
+    padding: 5px 10px;
+}
+
+.topnav .nav_links {
+    margin: 0 5px;
+    list-style: none;
+}
+
+.nav_links li a{
+    position: relative;
+    font-family: var(--primary-font);
+    font-size: var(--fs-500);
+    font-weight: var(--black);
+    color: var(--one);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav_links li a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--four);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav_links li:hover a::before {
+    opacity: 1;
+}
+
+
+.icon {
+    height: 35px;
+    width: 30px;
+    margin: 5px;
+    padding: 5px;
+
+
+
+}
+
+.nav_links button{
+    background-color: var(--four);
+    color: var(--neutral);
+    font-family: var(--primary-font);
+    font-size: var(--fs-500);
+    font-weight: var(--bold);
+    border-color: var(--four);
+    margin: 5px;
+    padding: 5px;
+}
+
+/* titel på siden og headline */
+
+.main-heading {
+    font-family: var(--primary-font);
+    font-size: var(--fs-900);
+    font-weight: var(--bold);
+    color: var(--four);
+    text-align: center;
+}
+
+.heading {
+    font-family: var(--primary-font);
+    font-size: var(--fs-700);
+    font-weight: var(--bold);
+    color: var(--one);
+    text-align: center;
+}
+
+/* billede på forsiden */
+
+.frontimg {
+    width: 100%;    
+}
+
+.p {
+    position: absolute;
+    display: flex;
+    font-family: var(--primary-font);
+    font-size: var(--fs-500);
+    font-weight: var(--regular);
+    color: var(--two);
+}
+
+/* countdown */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: box-sizing;
+}
+ 
+h2 {
+    font-size: 18px;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    font-family: var(--primary-font);
+}
+
+.coming-soon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: 12px;
+}
+
+.day,.hour,.minute,.second{
+    font-size: 30px;
+    font-family: var(--primary-font);
+}
+
+
+/* bunden af hjemmesiden */
+.footer {
+    background-color: var(--primary);
+
+}
+
+@media (max-fixed: 790) {
+    .menu {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0; 
+    }
+
+    .topnav .nav_links {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        
+    }
+}
