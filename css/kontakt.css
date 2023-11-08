@@ -136,8 +136,6 @@ nav .topnav {
     margin: 5px;
     padding: 5px;
 
-
-
 }
 
 .nav_links button{
@@ -168,26 +166,32 @@ nav .topnav {
   
   /* Style for headings */
   h2 {
-    font-size: 28px;
+    font-size: var(--fs-800);
+    font-weight: var(--bold);
     color: var(--one);
+    text-align: center;
   }
   
   h4 {
-    font-size: 20px;
+    font-size: var(--fs-700);
     color: var(--one);
+    text-align: center;
   }
   
   /* Style for paragraphs */
   p {
     font-size: var(--fs-500);
-    color: var(--one);
+    color: var(--two);
+    text-align: center;
   }
   
   /* Style for social media icons */
   .SoMe {
+
     width: 24px;
     height: 24px;
     margin-right: 10px;
+    
   }
   
   /* Style for the form fields */
@@ -200,7 +204,7 @@ nav .topnav {
     border: 1px solid var(--two);
     border-radius: 5px;
   }
-  
+
   /* Style for the submit button */
   input[type="submit"] {
     background-color: var(--four);
@@ -218,6 +222,9 @@ nav .topnav {
   }
 
   .footer{
-   
+    margin: 25px;
+    padding: 20px;
+    height: 70px;
+    width: 100%;
     background-color: var(--two);
   }
