@@ -171,15 +171,6 @@ nav .topnav {
     text-align: center;
 }
 
-/* billede på forsiden */
-
-.frontimg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-}
-
 .p-text {
     position: block;
     display: flex;
@@ -189,6 +180,24 @@ nav .topnav {
     font-weight: var(--regular);
     color: var(--two);
 }
+
+/* billede på forsiden */
+
+.frontimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.frontslider{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 220px;
+    width: 300px;
+}
+
 
 /* countdown */
 * {
