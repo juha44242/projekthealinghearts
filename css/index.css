@@ -163,6 +163,13 @@ nav .topnav {
     text-align: center;
 }
 
+h2{
+    font-family: var(--primary-font);
+    font-size: var(--fs-800);
+    font-weight: var(--bold);
+    text-align: center;
+}
+
 /* billede på forsiden */
 
 .frontimg {
@@ -223,6 +230,10 @@ h2 {
     background-color: var(--primary);
     width: 100%;
 }
+
+
+
+
 
 @media (max-fixed: 790) {
     .menu {
