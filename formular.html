@@ -9,109 +9,91 @@
         <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/formular.css">
-        <script src="js/index.js" defer></script>       
+        <script src="js/index.js" defer></script>
+        <script src="js/formular.js" defer></script>       
     </head>
 
     <body>
 
-        <h1> Registering for at blive frivillig</h1>
-
-        <!-- progressbar -->
+        <h1>Registering at Bliv frivillige</h1>
 
         <div class="progressbar">
-            <div class="progress-step active" data-title="Navn"></div>
-            <div class="progress-step" data-title="Kontakt"></div>
-            <div class="progress-step" data-title="Kategori"></div>
+            <div class="progress" id="progress"></div>
+            <div class="progress-step active" data-title="Name"></div>
+            <div class="progress-step" data-title="Contact"></div>
+            <div class="progress-step" data-title="Category"></div>
             <div class="progress-step" data-title="Password"></div>
         </div>
-
-        <!-- steps -->
-
+    
         <form action="#" class="form">
-
-            <h2 class="text-center">Bliv Frivillig</h2>
-
-          <div class="form-step active">
-            <div class="input-group">
-                <label for="username">Fornavn</label>
-                <input type="text" name="username" id="username">
+            <h2 class="text-center">Bliv frivillig</h2>
+    
+            <div class="form-step active">
+                <div class="input-group">
+                    <label for="username">First Name</label>
+                    <input type="text" name="username" id="username">
+                </div>
+                <div class="input-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" id="lname">
+                </div>
+                <div class="custom_select">
+                    <label>Køn</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="Male">Mand</option>
+                        <option value="Female">Kvinde</option>
+                        <option value="Non-binary">Non-binær</option>
+                        <option value="Other">Andet</option>
+                    </select>
+                </div>
             </div>
-            <div class="input-group">
-                <label for="lname">Efternavn</label>
-                <input type="text" name="lname" id="lname">
+    
+            <div class="form-step">
+                <div class="input-group">
+                    <label for="telefon">Phone</label>
+                    <input type="text" name="telefon" id="telefon">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
             </div>
-            
-            <div class="custom_select">
-                <label>Køn</label>
-                <select>
-                    <option value="">Vælg</option>
-                    <option value="Mand">Mand</option>
-                    <option value="Kvinde">Kvinde</option>
-                    <option value="Transkønnet">Transkønnet</option>
-                    <option value="Non-binær">Non-binær</option>
-                    <option value="Andet">Andet</option>
-                </select>
+    
+            <div class="form-step">
+                <div class="input-group">
+                    <label for="kategori">Kategory</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Food">Food</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Creative">Creative</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="besked">Message</label>
+                    <input type="text" name="besked" id="besked">
+                </div>
             </div>
-        </div>
-        <div class="">
-            <a href="#" class="btn btn-next with-50 ml-auto">Næste</a>
-        </div>  
-       
-        <div class="form-step">
-            <div class="input-group">
-                <label for="telefon">Telefon</label>
-                <input type="text" name="username" id="username">
+    
+            <div class="form-step">
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="input-group">
+                    <label for="gentagpassword">Confirm Password</label>
+                    <input type="password" name="gentagpassword" id="gentagpassword">
+                </div>
             </div>
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+    
+            <div class="btns-group">
+                <button class="btn btn-pre">Back</button>
+                <button class="btn btn-next">Next</button>
             </div>
-        </div>
-        <div class="btns-group">
-            <a href="#" class="btn btn-pre">Tilbage</a>
-            <a href="#" class="btn btn-next">Næste</a>
-        </div> 
-
-        <div class="form-step">
-            <div class="input-group">
-                <label for="kat">Kategori</label>
-                <select>
-                    <option value="">Vælg</option>
-                    <option value="sport">Sport</option>
-                    <option value="madbod">Mad</option>
-                    <option value="Teknologi">Teknologi</option>
-                    <option value="kreativt">Kreativt</option>
-                    <option value="Andet">Andet</option>
-                </select>
-                <input type="kategori" name="kat" id="kat">
-            </div>
-            <div class="input-group">
-                <label for="besked">besked</label>
-                <input type="text" name="besked" id="besked">
-            </div>
-        </div>
-        <div class="btns-group">
-            <a href="#" class="btn btn-pre">tilbage</a>
-            <a href="#" class="btn btn-next">Næste</a>
-        </div>
-
-        <div class="form-step">
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" name="password">
-            </div>
-            <div class="input-group">
-                <label for="gentagpassword">Gentag password</label>
-                <input type="password" name="gentagpassword" id="gentagpassword">
-            </div>
-        </div>
-        <div class="btns-group">
-            <a href="#" class="btn btn-pre">tilbage</a>
-            <input type="submit" value="Indsend" class="btn">
-        </div> 
-
         </form>
-
             
         
 </body>
