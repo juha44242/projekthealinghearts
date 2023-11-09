@@ -1,75 +1,63 @@
-const prevBtns = document.querySelectorAll('.btn-pre');
-const nextBtns = document.querySelectorAll('.btn-next');
-const sendBtn = document.querySelector('.btn-send');
-const progress = document.getElementById('progress');
-const formSteps = document.querySelectorAll('.form-step');
-const progressSteps = document.querySelectorAll('.progress-step');
-const confirmationModal = document.getElementById('confirmationModal');
+  document.addEventListener('DOMContentLoaded', function () {
+    const progressSteps = document.querySelectorAll('.progress-step');
+    const formSteps = document.querySelectorAll('.form-step');
+    const progressBar = document.getElementById('progress');
+    const nextButtons = document.querySelectorAll('.btn-next');
+    const prevButtons = document.querySelectorAll('.btn-pre');
+    const sendButton = document.querySelector('.btn-send');
+    const popup = document.getElementById('popup');
 
-let formStepsNum = 0;
+    let currentStep = 0;
 
-nextBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        if (validateFormStep(formStepsNum)) {
-            formStepsNum++;
-            updateFormAndProgress();
-        }
-    });
-});
-
-prevBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        formStepsNum--;
-        updateFormAndProgress();
-    });
-});
-
-sendBtn.addEventListener('click', () => {
-    if (validateFormStep(formStepsNum)) {
-        alert('Form submitted successfully!');
-        openConfirmationModal();
-    }
-});
-
-function validateFormStep(stepIndex) {
-    const currentFormStep = formSteps[stepIndex];
-    const inputs = currentFormStep.querySelectorAll('input[required]');
-
-    for (const input of inputs) {
-        if (!input.value.trim()) {
-            alert(`Please fill in the ${input.name} field.`);
-            return false;
-        }
+    function updateProgress() {
+      const progressValue = (currentStep / (progressSteps.length - 1)) * 100 + '%';
+      progressBar.style.width = progressValue;
     }
 
-    return true;
-}
+    function updateStep() {
+      formSteps.forEach((step, index) => {
+        if (index === currentStep) {
+          step.classList.add('active');
+          progressSteps[index].classList.add('active');
+        } else {
+          step.classList.remove('active');
+          progressSteps[index].classList.remove('active');
+        }
+      });
+    }
 
-function updateFormAndProgress() {
-    updateFormSteps();
-    updateProgressbar();
-}
+    function openPopup() {
+      popup.classList.add('open-popup');
+    }
 
-function updateFormSteps() {
-    formSteps.forEach(formStep => formStep.classList.remove('active'));
-    formSteps[formStepsNum].classList.add('active');
-}
+    function closePopup() {
+      popup.classList.remove('open-popup');
+      // You can add additional logic here if needed
+    }
 
-function updateProgressbar() {
-    progressSteps.forEach((progressStep, idx) => {
-        idx < formStepsNum + 1
-            ? progressStep.classList.add('active')
-            : progressStep.classList.remove('active');
+    nextButtons.forEach((button) => {
+      button.addEventListener('click', function () {
+        if (currentStep < formSteps.length - 1) {
+          currentStep++;
+          updateStep();
+          updateProgress();
+        }
+      });
     });
 
-    const progressActive = document.querySelectorAll('.progress-step.active');
-    progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + '%';
-}
+    prevButtons.forEach((button) => {
+      button.addEventListener('click', function () {
+        if (currentStep > 0) {
+          currentStep--;
+          updateStep();
+          updateProgress();
+        }
+      });
+    });
 
-function openConfirmationModal() {
-    confirmationModal.style.display = 'block';
-}
+    sendButton.addEventListener('click', openPopup);
 
-function closeConfirmationModal() {
-    confirmationModal.style.display = 'none';
-}
+    // Add an event listener to the OK button in the popup
+    const okButton = document.querySelector('.btn-ok');
+    okButton.addEventListener('click', closePopup);
+  });
