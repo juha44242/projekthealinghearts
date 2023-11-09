@@ -92,41 +92,23 @@
         </div>
         <div class="btns-group">
             <a href="#" class="btn btn-pre">Tilbage</a>
-            <a href="#" class="btn btn-send">Send</a>
-        </div>
+            <a href="#" class="btn btn-send" onclick="openPopup()">Send</a>
+        </div>      
     </div>  
 
-    <!-- Confirmation Step -->
-    <div class="form-step">
-        <h2>Bekræft dine oplysninger</h2>
-        <!-- Display user information for confirmation -->
-        <div class="confirmation-info">
-            <p><strong>Fornavn:</strong> <span id="confirmation-username"></span></p>
-            <p><strong>Efternavn:</strong> <span id="confirmation-lname"></span></p>
-            <p><strong>Telefon:</strong> <span id="confirmation-phone"></span></p>
-            <p><strong>Email:</strong> <span id="confirmation-email"></span></p>
-            <p><strong>Hvad:</strong> <span id="confirmation-category"></span></p>
-            <p><strong>Hvor:</strong> <span id="confirmation-location"></span></p>
-            <p><strong>Date:</strong> <span id="confirmation-date"></span></p>
-            <p><strong>Tid:</strong> <span id="confirmation-time"></span></p>
+    <div class="popup" id="popup">
+            <img src="img/check-circle-regular-24.png" alt="et checktegn ved godkendelse">
+            <h2> Mange Tak</h2>
+            <p>Du har tilmeldt dig til Healing Hearts festivalen.
+                Mere information kommer senere.
+                Sendt og Modtaget
+            </p>
+        <button href="index.html" type="btn-ok" onclick="closePopup()">OK</button>
         </div>
-        <div class="btns-group">
-            <a href="#" class="btn btn-pre">Tilbage</a>
-            <a href="#" class="btn btn-send">Send</a>
-        </div>
-    </div>
 
-    <div class="confirmation-modal" id="confirmationModal">
-        <div class="modal-content">
-            <span class="close" onclick="closeConfirmationModal()">&times;</span>
-            <h2>Tak for din tilmelding!</h2>
-            <p>Dine oplysninger er blevet modtaget.</p>
-        </div>
-    </div>
-    
     </form>
 
-    45545
+
    
         
 </body>
