@@ -192,15 +192,11 @@ nav .topnav {
 .btn-one{
     background-color: var(--four);
     color: var(--neutral);
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-family: var(--primary-font);
     font-size: var(--fs-500);
     font-weight: var(--bold);
     border-color: var(--four);
-    margin: 5px;
-    padding: 5px;
+   
 }
 
 /* billede på forsiden */
@@ -259,7 +255,7 @@ h2 {
 
 /* bunden af hjemmesiden */
 .footer {
-    background-color: var(--primary);
+    background-color: var(--two);
     width: 100%;    
 }
 
