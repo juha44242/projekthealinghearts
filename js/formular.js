@@ -55,7 +55,7 @@
       });
     });
 
-    sendButton.addEventListener('click', openPopup);
+    sendButton.addEventListener('click', closePopup);
 
     // Add an event listener to the OK button in the popup
     const okButton = document.querySelector('.btn-ok');
