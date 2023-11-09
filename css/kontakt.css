@@ -225,10 +225,3 @@ nav .topnav {
     background-color: var(--three);
   }
 
-  .footer{
-    margin: 25px;
-    padding: 20px;
-    height: 70px;
-    width: 100%;
-    background-color: var(--two);
-  }
