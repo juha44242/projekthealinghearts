@@ -277,7 +277,44 @@ h2 {
 }
 
 
+/* media queries*/
 
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: var(--primary);
+    }
+  
+    .header {
+      padding: 15px; /* Adjust the padding for smaller screens */
+    }
+  
+    nav {
+      height: auto;
+    }
+  
+    .topnav {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .nav_links {
+      margin: 0;
+    }
+  
+    .nav_links li {
+      margin: 5px 0;
+    }
+  
+    .nav_links li a {
+      font-size: var(--fs-500); /* Adjust font size for smaller screens */
+    }
+  
+    .frontimg {
+      width: 100%; /* Adjust image width for smaller screens */
+    }
+  
+    /* Add more styles as needed for mobile devices */
+  }
 
 @media (max-fixed: 790) {
     .menu {
