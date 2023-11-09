@@ -31,7 +31,7 @@
     }
 
     function closePopup() {
-      popup.classList.remove('open-popup');
+      popup.classList.remove('close-popup');
       // You can add additional logic here if needed
     }
 
