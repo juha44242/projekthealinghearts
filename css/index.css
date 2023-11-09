@@ -126,6 +126,14 @@ nav .topnav {
     opacity: 1;
 }
 
+
+.icon {
+    height: 35px;
+    width: 30px;
+    margin: 5px;
+    padding: 5px;
+}
+
 .nav_links button{
     background-color: var(--four);
     color: var(--neutral);
@@ -145,25 +153,42 @@ nav .topnav {
     font-weight: var(--bold);
     color: var(--four);
     text-align: center;
+    line-height: 65px;
 }
 
-.heading {
+.pageheading{
     font-family: var(--primary-font);
-    font-size: var(--fs-700);
+    font-size: var(--fs-800);
+    font-weight: var(--bold);
+    color: var(--one);
+    text-align: center;
+    line-height: 40px;
+}
+
+.heading{
+    font-family: var(--primary-font);
+    font-size: var(--fs-600);
     font-weight: var(--bold);
     color: var(--one);
     text-align: center;
 }
 
-/* billede på forsiden */
-
-.frontimg {
-    width: 100%;    
+/* red line */
+#redline {
+    width: 200px; /* Adjust the width as needed */
+    height: 2px; /* Adjust the height as needed */
+    background-color: red;
+    margin: 10px auto; /* To center the line vertically */
 }
 
-.p {
-    position: absolute;
+
+.p-text {
+    position: block;
     display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
     font-family: var(--primary-font);
     font-size: var(--fs-500);
     font-weight: var(--regular);
@@ -171,28 +196,33 @@ nav .topnav {
 }
 
 
-/* bunden af hjemmesiden */
-.footer {
-    background-color: var(--primary);
+/* knapper */
 
+.btn-one{
+    background-color: var(--four);
+    color: var(--neutral);
+    font-family: var(--primary-font);
+    font-size: var(--fs-500);
+    font-weight: var(--bold);
+    border-color: var(--four);
 }
 
-@media (max-fixed: 790) {
-    .menu {
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        left: 0;
-        top: 0; 
-    }
 
-    .topnav .nav_links {
-        flex-direction: row;
-        display: flex;
-        align-items: center;
-        font-size: 14px;
-        
-    }
+/* billede på forsiden */
+
+.frontimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.frontslider{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 220px;
+    width: 300px;
 }
 
 
@@ -229,4 +259,143 @@ h2 {
 .day,.hour,.minute,.second{
     font-size: 30px;
     font-family: var(--primary-font);
+}
+
+
+/* bunden af hjemmesiden */
+.footer {
+    background-color: var(--primary);
+    width: 100%;   
+    text-align: center; 
+}
+
+.SoMe{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* media queries*/
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: var(--primary);
+    }
+  
+    .header {
+      padding: 15px; /* Adjust the padding for smaller screens */
+    }
+  
+    nav {
+      height: auto;
+    }
+  
+    .topnav {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .nav_links {
+      margin: 0;
+    }
+  
+    .nav_links li {
+      margin: 5px 0;
+    }
+  
+    .nav_links li a {
+      font-size: var(--fs-500); /* Adjust font size for smaller screens */
+    }
+  
+    .frontimg {
+      width: 100%; /* Adjust image width for smaller screens */
+    }
+  
+    /* Add more styles as needed for mobile devices */
+  }
+
+/* Mobile styles (default) */
+.header {
+    padding: 15px;
+}
+
+nav {
+    height: auto;
+}
+
+.topnav {
+    flex-direction: column;
+    height: auto;
+}
+
+.topnav .nav_links {
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_links li {
+    margin: 5px 0;
+}
+
+.nav_links li a {
+    padding: 8px;
+}
+
+.icon {
+    height: 25px;
+    width: 20px;
+}
+
+/* Media query for tablets and larger screens */
+@media only screen and (min-width: 768px) {
+    .header {
+        padding: 25px;
+    }
+
+    nav {
+        height: 180px;
+    }
+
+    .topnav {
+        flex-direction: row;
+        height: 100%;
+    }
+
+    .topnav .nav_links {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav_links li {
+        margin: 0 10px;
+    }
+
+    .nav_links li a {
+        padding: 10px;
+    }
+
+    .icon {
+        height: 35px;
+        width: 30px;
+    }
+}
+
+@media (max-fixed: 790) {
+    .menu {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0; 
+    }
+
+    .topnav .nav_links {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        
+    }
 }

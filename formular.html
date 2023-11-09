@@ -1,66 +1,131 @@
-<div class="wrapper">
-    <div class="title">
-        Registering for at blive frivillig 
+<!DOCTYPE html>
+<html lang="da"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Healinghearts</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/formular.css">
+        <script src="js/index.js" defer></script>
+        <script src="js/formular.js" defer></script>       
+    </head>
+
+    <body>
+
+    <header class="header">
+        <a href="index.html"><img src="img/logohh.png" alt="Logo til projekt om Healing Hearts" class="logo"></a>
+    </header>
+
+    <form action="#" class="form">
+
+    <h1 class="text-center">Bliv frivillig.</h1>
+
+    <!-- progressbar -->
+
+        <div class="progressbar">
+
+            <div class="progress" id="progress"></div>
+
+            <div class="progress-step active" data-title="Navn"></div>
+            <div class="progress-step" data-title="Kontakt"></div>
+            <div class="progress-step" data-title="Kategori"></div>
+            <div class="progress-step" data-title="Dato & Tid"></div>
+        </div>
+
+    <!-- steps -->
+
+    <div class="form-step active">
+        <div class="input-group">
+            <label for="username">Fornavn</label>
+            <input type="text" name="username" id="username">
+        </div>
+        <div class="input-group">
+            <label for="lname">Efternavn</label>
+            <input type="text" name="lname" id="lname">
+        </div>
+        <div>
+            <a href="#" class="btn btn-next with-50 ml-auto">Næste</a>
+        </div>
+    </div>  
+    
+    <div class="form-step">
+        <div class="input-group">
+            <label for="phone">Telefon</label>
+            <input type="text" name="phone" id="phone">
+        </div>
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div class="btns-group">
+            <a href="#" class="btn btn-pre">Tilbage</a>
+            <a href="#" class="btn btn-next">Næste</a>
+        </div>
+    </div>  
+
+    <div class="form-step">
+        <div class="input-group">
+            <label for="category">Hvad</label>
+            <input type="text" name="category" id="category">
+        </div>
+        <div class="input-group">
+            <label for="location">Hvor</label>
+            <input type="text" name="location" id="location">
+        </div>
+        <div class="btns-group">
+            <a href="#" class="btn btn-pre">Tilbage</a>
+            <a href="#" class="btn btn-next">Næste</a>
+        </div>
+    </div>  
+
+    <div class="form-step">
+        <div class="input-group">
+            <label for="date">Date</label>
+            <input type="data" name="date" id="date">
+        </div>
+        <div class="input-group">
+            <label for="time">Tid</label>
+            <input type="text" name="time" id="time">
+        </div>
+        <div class="btns-group">
+            <a href="#" class="btn btn-pre">Tilbage</a>
+            <a href="#" class="btn btn-send">Send</a>
+        </div>
+    </div>  
+
+    <!-- Confirmation Step -->
+    <div class="form-step">
+        <h2>Bekræft dine oplysninger</h2>
+        <!-- Display user information for confirmation -->
+        <div class="confirmation-info">
+            <p><strong>Fornavn:</strong> <span id="confirmation-username"></span></p>
+            <p><strong>Efternavn:</strong> <span id="confirmation-lname"></span></p>
+            <p><strong>Telefon:</strong> <span id="confirmation-phone"></span></p>
+            <p><strong>Email:</strong> <span id="confirmation-email"></span></p>
+            <p><strong>Hvad:</strong> <span id="confirmation-category"></span></p>
+            <p><strong>Hvor:</strong> <span id="confirmation-location"></span></p>
+            <p><strong>Date:</strong> <span id="confirmation-date"></span></p>
+            <p><strong>Tid:</strong> <span id="confirmation-time"></span></p>
+        </div>
+        <div class="btns-group">
+            <a href="#" class="btn btn-pre">Tilbage</a>
+            <a href="#" class="btn btn-send">Send</a>
+        </div>
     </div>
-    <div class="form">
-        <div class="input_field">
-            <label>Fornavn</label>
-            <input type="text" class="input">
-        </div>
-    <div class="input_field">
-            <label>Efternavn</label>
-            <input type="text" class="input">
-        </div>
-    <div class="input_field">
-            <label>Password</label>
-            <input type="password" class="input">
-        </div>
-    <div class="input_field">
-            <label>Gentag password</label>
-            <input type="password" class="input">
-        </div>
-    <div class="input_field">
-            <label>Køn</label>
-            <div class="custom_select">
-                <select>
-                    <option value="">Vælg</option>
-                    <option value="Mand">Mand</option>
-                    <option value="Kvinde">Kvinde</option>
-                    <option value="Transkønnet">Transkønnet</option>
-                    <option value="Non-binær">Non-binær</option>
-                    <option value="Andet">Andet</option>
-                </select>
-            </div>
-        </div>
-    <div class="input_field">
-            <label>Email</label>
-            <input type="text" class="input">
-        </div>
-    <div class="input_field">
-            <label>Mobilnummer</label>
-            <input type="text" class="input">
-        </div>
-    <div class="input_field">
-            <label>Adresse</label>
-            <textarea class="textarea"></textarea>
-        </div>
-    <div class="input_field">
-            <label>Postnr.</label>
-            <input type="text" class="input">
-        </div>
-    <div class="input_field">
-            <label>By</label>
-            <input type="text" class="input">
-        </div>
-    <div class="input_field terms">
-            <label class="check">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-            <p>Godkend beteingelserne</p>
-        </div>
-    <div class="input_field">
-        <input type="submit" value="register" class="btn">
+
+    <div class="confirmation-modal" id="confirmationModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConfirmationModal()">&times;</span>
+            <h2>Tak for din tilmelding!</h2>
+            <p>Dine oplysninger er blevet modtaget.</p>
         </div>
     </div>
-</div>
+    
+    </form>
+   
+        
+</body>
+</html>

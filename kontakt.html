@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/kontakt.css">
         <link rel="stylesheet" href="css/index.css">
         <script src="js/index.js" defer></script>       
     </head>
@@ -22,41 +23,46 @@
                         <ul class="nav_links">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="eventindformation.html">Event Information</a></li>                        
-                            <li><a href="kort.html">Kort</a></li>
+                            <li><a href="Map.html">Kort</a></li>
                             <li><a href="blivfrivillig.html">Bliv Frivillig</a></li>
                             <li><a href="lægerudengrænser.html">Læger uden grænser</a></li>
                             <li><a href="kontakt.html">Kontakt</a></li>
-                            <a href="basket.html"><img src="img/cart-regular-24.png"></a>
+                            <a href="basket.html"><img src="img/kurvikon.png" class="icon"></a>
                             <a class="button" href="koebbillet.html"><button>Køb Billetter</button></a>
                         </ul>
                     </div>
                 </div>                   
             </nav>                   
   
-            <h2> Kontakt os</h2>
+            <h2 class="pageheading"> Kontakt os</h2>
+
+            <div id="redline"></div>
+
+            <br>
 
             <p> Har du nogle spørgsmål eller har du bare lsyt til at kontaktet os?</p>
 
-            <h4> følg os</h4>
-            <a href="#"><img src="img/instagram-logo-24.png" alt="SoMe link" class="SoMe"></a>
-            <a href="#"><img src="img/facebook-square-logo-24.png" alt="SoMe link" class="SoMe"></a>
-            <a href="#"><img src="img/linkedin-square-logo-24.png" alt="SoMe link" class="SoMe"></a>
 
+            <p>Telefon: +45 23 23 49 07</p>
+            
+            <br>
 
-            <p>telefon: +45 23 23 49 07</p>
+            <p> Email: HH@MSF.dk</p>
 
-            <p> email: HH@MSF.dk</p>
+            <br>
 
-            Ellers send os en direkte besked!
+            <p>Ellers send os en direkte besked!</p>
+             
+            <br>
 
             <div class="container">
                 <form action="action_page.php">
               
                   <label for="fnavn">Fornavn</label>
-                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  <input type="text" id="fname" name="firstname" placeholder="Fornavn">
               
                   <label for="enavn">Efternavn</label>
-                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  <input type="text" id="lname" name="lastname" placeholder="Efternavn">
               
                   <label for="landsdel">Landsdel</label>
                   <select id="landsdel" name="landsdel">
@@ -65,8 +71,8 @@
                     <option value="sjælland">Sjælland</option>
                   </select>
               
-                  <label for="beksed">besked</label>
-                  <textarea id="subject" name="subject" placeholder="skriv besked" style="height:200px"></textarea>
+                  <label for="besked">Besked</label>
+                  <textarea id="subject" name="subject" placeholder="Skriv besked" style="height:200px"></textarea>
               
                   <input type="submit" value="Send">
               
@@ -74,11 +80,13 @@
               </div>
 
 
-        <footer>
-            <h3>Følg os</h3>
-            <a href="#"><img src="img/instagram-logo-24.png" alt="SoMe link" class="SoMe"></a>
-            <a href="#"><img src="img/facebook-square-logo-24.png" alt="SoMe link" class="SoMe"></a>
-            <a href="#"><img src="img/linkedin-square-logo-24.png" alt="SoMe link" class="SoMe"></a>
+        <footer class="footer">
+            <h3 class="heading">Følg os</h3>
+            <ul class="SoMe">
+            <li><a href="#"><img src="img/instagram-logo-24.png" alt="SoMe link"></a></li>
+            <li><a href="#"><img src="img/facebook-square-logo-24.png" alt="SoMe link"></a></li>
+            <li><a href="#"><img src="img/linkedin-square-logo-24.png" alt="SoMe link"></a></li>
+            </ul>          
         </footer>
     </body>
 </html>
