@@ -207,3 +207,44 @@ input{
 .btn:hover{
     box-shadow: 0 0 0 2px var(--three), 0 0 003px;
 }
+
+/* media queries */
+
+/* Mobile-first styles */
+
+body {
+    font-size: 15px; 
+}
+
+.form {
+    width: 95%; /* Adjust the width for mobile */
+}
+
+
+
+/* Media query for tablets and larger screens */
+
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 18px; 
+    }
+
+    .form {
+        width: 60%; 
+    }
+
+}
+
+/* Media query for desktops and larger screens */
+
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 20px; 
+    }
+
+    .form {
+        width: 40%; 
+    }
+
+
+}
