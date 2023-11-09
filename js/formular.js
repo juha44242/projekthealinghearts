@@ -27,11 +27,11 @@
     }
 
     function openPopup() {
-      popup.classList.add('open-popup');
+      popup.classList.add('openPopup');
     }
 
     function closePopup() {
-      popup.classList.remove('close-popup');
+      popup.classList.remove('closePopup');
       // You can add additional logic here if needed
     }
 
