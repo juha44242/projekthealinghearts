@@ -1,46 +1,43 @@
-<script>
-const formSteps = document.querySelectorAll('.form-step');
-const progressSteps = document.querySelectorAll('.progress-step');
-const progress = document.getElementById('progress');
-const prevButton = document.querySelector('.btn-prev');
-const nextButton = document.querySelector('.btn-next');
+const prevBtns = document.querySelectorAll('.btn-pre'); // Removed 'selectors:'
+const nextBtns = document.querySelectorAll('.btn-next'); // Removed extra parentheses and 'selectors:'
+const progress = document.getElementById('progress'); // Removed 'element:'
+const formSteps = document.querySelectorAll('.form-step'); // Removed 'selectors:'
+const progressSteps = document.querySelectorAll('.progress-step'); // Removed 'selectors:'
 
-let currentStep = 0;
+let formStepsNum = 0;
 
-function updateStepDisplay() {
-    formSteps.forEach((step, index) => {
-        if (index === currentStep) {
-            step.classList.add('active');
-        } else {
-            step.classList.remove('active');
-        }
+nextBtns.forEach(btn => {
+    btn.addEventListener('click', () => { // Corrected 'addEventListner' to 'addEventListener'
+        formStepsNum++;
+        updateFormSteps();
+        updateProgressbar();
     });
+});
 
-    progressSteps.forEach((step, index) => {
-        if (index < currentStep) {
-            step.classList add('active');
-        } else {
-            step.classList.remove('active');
-        }
+prevBtns.forEach(btn => {
+    btn.addEventListener('click', () => { // Corrected 'addEventListner' to 'addEventListener'
+        formStepsNum--;
+        updateFormSteps();
+        updateProgressbar();
     });
+});
 
-    progress.style.width = (currentStep / (formSteps.length - 1)) * 100 + '%';
+function updateFormSteps() {
+    formSteps.forEach(formStep => {
+        formStep.classList.remove('active'); // Removed 'tokens:' and fixed the class removal
+    });
+    formSteps[formStepsNum].classList.add('active');
 }
 
-prevButton.addEventListener('click', () => {
-    if (currentStep > 0) {
-        currentStep--;
-        updateStepDisplay();
-    }
-});
+function updateProgressbar() {
+    progressSteps.forEach((progressStep, idx) => { // Added a missing '(' here
+        if (idx < formStepsNum + 1) {
+            progressStep.classList.add('active');
+        } else {
+            progressStep.classList.remove('active');
+        }
+    });
 
-nextButton.addEventListener('click', () => {
-    if (currentStep < formSteps.length - 1) {
-        currentStep++;
-        updateStepDisplay();
-    }
-});
-
-// Initial step display update
-updateStepDisplay();
-</script>
+    const progressActive = document.querySelectorAll('.progress-step.active');
+    progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + '%';
+}
