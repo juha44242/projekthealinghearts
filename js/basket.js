@@ -1,9 +1,9 @@
 //Indkøbskurv:
 // Vælger HTML-element via document.querySelector og tildeler det til opensShopping variablen. Åbner kurven når man kilkker//
 let opensShopping = document.querySelector('.shopping');
-// Knap der lukker kurven ved at tildele closeShopping et HTML-element//
+//Lukker kurven ved at tildele closeShopping et HTML-element//
 let closeShopping = document.querySelector('.closeShopping');
-//Tildeler list-variablen et HTML element. Viser hele kurven/listen//
+//Viser hele kurven ved at tildele list-variablen et HTML-element//
 let list = document.querySelector('.list');
 //Repræsenterer individuelle elementer i kurven
 let listCard = document.querySelector('.listCard');
@@ -15,7 +15,7 @@ let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 //opensShopping=kurv-ikonet. addEventListener gør at callback-funktion udføres
 opensShopping.addEventListener('click', ()=>{
-    //Callback function: (når <body> er aktivt, fremhæves indkøbskurven)
+    //Callback function: (når <body> er aktivt, åbnes indkøbskurven)
     body.classList.add('active');
 })
 //closeShopping: X'et i indkøbskurven. 
@@ -82,7 +82,7 @@ function addToCard(key){
 }
 function reloadCard( ){
     listCard.innerHTML = ' ';
-    //Holder styr på antan varer i kurven
+    //Holder styr på antal varer i kurven
     let count = 0;
     //Holder styr på prisen. 0 varer = 0 kr.
     let totalPrice = 0;
